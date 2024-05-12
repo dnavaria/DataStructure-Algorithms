@@ -3,12 +3,10 @@ class Solution:
     # @return a list of list of integers
     def solve(self, A):
         N = len(A)
-        for i in range(N):
-            for j in range(i + 1, N):
-                if i == j:
-                    continue
-                else:
-                    temp = A[i][j]
-                    A[i][j] = A[j][i]
-                    A[j][i] = temp
-        return A
+        M = len(A[0])
+        t_matrix = [[0 for i in range(N)] for j in range(M)]
+        for i in range(M):
+            for j in range(N):
+                t_matrix[i][j] = A[j][i]
+        return t_matrix
+
