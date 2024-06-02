@@ -6,7 +6,10 @@
  *     ListNode(int x) { val = x; next = null; }
  * }
  */
-public class Solution {
+
+import BaseDataStructures.ListNode;
+
+public class CompareLinkedList {
     public int solve(ListNode A, ListNode B) {
         ListNode h1 = A;
         ListNode h2 = B;

@@ -6,16 +6,16 @@
  *     ListNode(int x) { val = x; next = null; }
  * }
  */
-public class Solution {
+import BaseDataStructures.ListNode;
+
+public class SearchInLinkedList {
     public int solve(ListNode A, int B) {
-        if(A==null){
-            return -1;
+        while(A != null){
+            if (A.val == B){
+                return 1;
+            }
+            A = A.next;
         }
-        int size=0;
-        while(size<B){
-            A=A.next;
-            size++;
-        }
-        return A.val;
+        return 0;
     }
 }

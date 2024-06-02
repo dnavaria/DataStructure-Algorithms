@@ -6,14 +6,18 @@
  *     ListNode(int x) { val = x; next = null; }
  * }
  */
-public class Solution {
+import BaseDataStructures.ListNode;
+
+public class GetKthElement {
     public int solve(ListNode A, int B) {
-        while(A != null){
-            if (A.val == B){
-                return 1;
-            }
-            A = A.next;
+        if(A==null){
+            return -1;
         }
-        return 0;
+        int size=0;
+        while(size<B){
+            A=A.next;
+            size++;
+        }
+        return A.val;
     }
 }
